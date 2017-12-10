@@ -275,10 +275,7 @@ class MothurCommand:
                         # because multiple files with the same extension can be returned we save them in a list
                         if parse_output_flag:
                             output_file_path = line.split(os.path.sep)
-                            if len(output_file_path) == 1:
-                                output_file_name = output_file_path
-                            else:
-                                output_file_name = output_file_path[-1]
+                            output_file_name = output_file_path[-1]
                             output_file_type = output_file_name.rsplit('.', 1)[-1]
                             new_output_files[output_file_type].append(output_file_name)
 
